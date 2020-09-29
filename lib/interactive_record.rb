@@ -42,7 +42,7 @@ class InteractiveRecord
   end
   
   def table_name_for_insert
-    self.to_s.downcase.pluralize.join
+    self.to_s.downcase.pluralize
   end
   
   
