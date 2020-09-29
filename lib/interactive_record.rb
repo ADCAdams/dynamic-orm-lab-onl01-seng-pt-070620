@@ -41,6 +41,10 @@ class InteractiveRecord
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end
   
+  def table_name_for_insert
+    self.to_s.downcase.pluralize.join
+  end
+  
   
   
 end
