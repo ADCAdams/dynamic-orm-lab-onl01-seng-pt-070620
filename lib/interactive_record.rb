@@ -57,6 +57,8 @@ class InteractiveRecord
   
   def self.find_by(search_hash)
     column, value = search_hash.first
+    puts column
+    puts value
     
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE '#{column}' = '#{value}'")
     
